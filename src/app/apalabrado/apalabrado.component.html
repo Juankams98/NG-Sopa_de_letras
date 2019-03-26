@@ -1,0 +1,18 @@
+<div>
+    <label>Words number: </label>
+    <select [(ngModel)]="numwords">
+            <option [value]="3" selected> 3 </option>
+        <ng-container   *ngFor="let c of numwordscapacity">      
+            <option *ngIf="c > 3" [value]="c"> {{c}} </option>
+        </ng-container>        
+    </select>
+    <button (click)="WordsDefine()">Generar</button>
+    <p>{{numwords}} words choosed</p>
+</div>
+<div>
+    <ul>
+        <li *ngFor="let d of wordlist"> {{d.name}} - {{d.definition}} </li>
+    </ul>
+    <table id="wordsContainer">
+    </table>
+</div>
