@@ -12,11 +12,11 @@ export class ApalabradoComponent implements OnInit {
   numwordscapacity: Array<number> = [3, 4, 5];
   numwords: number;
   wordlist: Array<Word>;
-  wordSquares: string[][];
+  wordSquares: string[][] = new Array();
   ncasillas: number;
   constructor(public _wordsservice: WordsmanagerService) { }
   ngOnInit() {
-    // this.wordSquares = [][];
+    this.wordSquares = [],[];
     this.numwords = 3;
     this.ncasillas = 10;
     this.wordlist = this._wordsservice.GetWords(this.numwords);
@@ -29,17 +29,15 @@ export class ApalabradoComponent implements OnInit {
   TableRestart() {
     console.log(this.wordSquares);
     for (let i = 0; i < this.ncasillas; i++) {
-      for (let l = 0; l < this.ncasillas; l++) {
-       this.wordSquares[i][l] = i + ', ' + l;
-      }
+       this.wordSquares.push(["X", "X", "X", "X" , "X" ,"X","X", "X", "X", "X"] );    
     }
     console.log(this.wordSquares);
     //
     let tabla = '';
-    for (let i = 0; i < this.ncasillas; i++) {
+    for (let i = 0; i < this.wordSquares.length; i++) {
       tabla = tabla + '<tr>';
-      for (let l = 0; l < this.ncasillas; l++) {
-        tabla = tabla + '<td>0</td>';
+      for (let l = 0; l < this.wordSquares.length; l++) {
+        tabla = tabla + '<td>'+ this.wordSquares[i][l] +'</td>';
       }
       tabla = tabla + '</tr>';
     }
