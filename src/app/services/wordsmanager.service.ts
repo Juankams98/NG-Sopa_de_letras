@@ -7,24 +7,24 @@ import { Word } from '../interfaces/word';
 export class WordsmanagerService {
   private wordlist: Array<Word> = [
     {
-      name: 'teemo',
-      definition: 'yordel lanza dardos',
+      name: 'coche',
+      definition: 'para moverte a distintos sitios',
     },
     {
-      name: 'kassadin',
-      definition: 'flash cada 10s',
+      name: 'españa',
+      definition: 'siempre arriba',
     },
     {
-      name: 'zoe',
-      definition: 'bolazos oneshoot',
+      name: 'perico',
+      definition: 'mongolin',
     },
     {
-      name: 'evelynn',
-      definition: 'se hace invible',
+      name: 'mosca',
+      definition: 'vuela y da porculo',
     },
     {
-      name: 'draven',
-      definition: 'hachas que giran',
+      name: 'conejo',
+      definition: 'bad bunny',
     },
   ];
 
@@ -39,11 +39,8 @@ export class WordsmanagerService {
   }
   shuffleArray(array) {
     let m = array.length, t, i;
-    // While there remain elements to shuffle
     while (m) {
-      // Pick a remaining element…
       i = Math.floor(Math.random() * m--);
-      // And swap it with the current element.
       t = array[m];
       array[m] = array[i];
       array[i] = t;
