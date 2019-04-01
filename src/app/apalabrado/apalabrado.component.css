@@ -1,0 +1,25 @@
+#parameterContainer{
+text-align: center;
+    
+}
+#wordsContainer{
+text-align: center;
+}
+#wordsContainer>table{
+    margin: auto;
+}
+tr,td {
+    color: whitesmoke;
+    background-color: rgb(63, 165, 248);
+    border: 2px solid;
+    border-color: whitesmoke;
+    border-collapse: collapse;
+    padding: 5px;
+    user-select: none; 
+}
+td:hover{
+    cursor: pointer;
+}
+#wordDescs{
+    text-align: center;
+}
